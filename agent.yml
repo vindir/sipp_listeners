@@ -1,0 +1,22 @@
+#
+# YAML Scenario for Test Plan 8 on TEST
+# The SurVo includes the following questions:
+# 1. Answering Machine Auto Question
+# 2. Prompt Question
+# 3. Multiple Choice Question
+# 4. Number Question
+# 5. Currency Question
+# 6. Digits Question
+# 7. Building Block Question
+#
+source: 127.0.0.1 # localhost
+destination: 10.203.175.32 # remotes
+sip_user: 301 # extension/user
+max_concurrent: 20
+calls_per_second: 2
+number_of_calls: 200
+steps:
+  - wait_for_answer
+  - ack_answer
+  - sleep 1 # Wait for call setup
+  - wait_for_hangup
