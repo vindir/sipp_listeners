@@ -1,0 +1,4 @@
+SEQUENTIAL
+301;[authentication username=301 password=1234]
+302;[authentication username=302 password=1234]
+303;[authentication username=303 password=1234]

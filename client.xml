@@ -1,5 +1,21 @@
 <?xml version="1.0"?>
 <scenario name="phrg_client">
+  <send retrans="500">
+    <![CDATA[
+
+      REGISTER sip:[remote_ip] SIP/2.0
+      Via: SIP/2.0/[transport] [local_ip]:[local_port]
+      To: <sip:[field0]@sip.com:[remote_port]>
+      From: <sip:[field0]@[remote_ip]:[remote_port]>
+      Contact: <sip:[field0]@[local_ip]:[local_port]>;transport=[transport]
+      [field1]
+      Expires: 300
+      Call-ID: [call_id]
+      CSeq: 2 REGISTER
+      Content-Length: 0
+
+    ]]>
+  </send>
   <send>
     <![CDATA[
       SIP/2.0 180 Ringing
